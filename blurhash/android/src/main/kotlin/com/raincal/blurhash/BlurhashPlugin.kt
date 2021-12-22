@@ -39,7 +39,7 @@ class BlurhashPlugin: FlutterPlugin, MethodCallHandler {
       val blurHash = call.argument<String>("blurHash")!!
       val width = call.argument<Int>("width")!!
       val height = call.argument<Int>("height")!!
-      val punch = call.argument<Float>("punch")!!.toFloat()
+      val punch = 1.0f ////call.argument<Float>("punch")!!.toFloat()
       val useCache = call.argument<Boolean>("useCache")!!
 
       val bitmap = BlurHashDecoder.decode(blurHash, width, height, punch, useCache)
